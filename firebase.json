@@ -1,0 +1,26 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "hex.andybitz.io",
+        "destination": "/hex"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "hex.andybitz.io",
+        "destination": "https://hexer-c18f5.firebaseapp.com",
+        "type": 302
+      },
+      {
+        "source": "/hex",
+        "destination": "https://hexer-c18f5.firebaseapp.com",
+        "type": 302
+      }
+    ]
+  }
+}

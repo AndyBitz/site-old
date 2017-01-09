@@ -1,0 +1,76 @@
+.profile
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	margin-top: 80px;
+
+	.avatar
+		text-align: center;
+
+		img
+			box-shadow: 8px 8px 16px 0 rgba(165,165,165,.61);
+			overflow: hidden;
+			border-radius: 100%;
+			width: 128px;
+			height: 128px;
+			transform: scale(0);
+			animation: -show-avatar 200ms 300ms forwards;
+			@media #{$mq-desktop}
+				width: 256px;
+				height: 256px;
+
+	.qoute-container
+		transform: scale(0.7);
+
+		@media #{$mq-desktop}
+			transform: scale(1);
+
+	.quote
+		text-align: center;
+		font-family: $font-merri;
+
+		.hide
+			animation: -hide 200ms forwards;
+
+		div
+			position: absolute;
+			width: 100%;
+			animation: -show 200ms forwards;
+
+		h3
+			display: inline-block;
+			font-size: 1.7em;
+			font-family: $font-merri;
+			user-select: none;
+			cursor: default;
+			font-weight: normal;
+
+			span
+				display: inline-block;
+
+
+@keyframes -show-avatar
+	0%
+		transform: scale(0);
+
+	100%
+		transform: scale(1);
+
+@keyframes -hide
+	0%
+		opacity: 1;
+		transform: translateY(0);
+
+	100%
+		opacity: 0;
+		transform: translateY(100px);
+
+@keyframes -show
+	0%
+		opacity: 0;
+		transform: translateY(-100px);
+
+	100%
+		opacity: 1;
+		transform: translateY(0);

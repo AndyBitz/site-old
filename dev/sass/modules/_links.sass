@@ -1,0 +1,39 @@
+.links
+	
+	position: absolute;
+	bottom: 10%;
+	@media #{$mq-desktop}
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		width: 100%;
+
+
+	ul
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		@media #{$mq-desktop}
+			width: 960px;
+
+		li
+			margin: 0 0 0 48px;
+
+			a
+				padding: 12px 24px;
+				text-decoration: none;
+				color: $col-font;
+				display: inline-block;
+				user-select: none;
+				cursor: pointer;
+
+				&:hover
+					background-color: rgba(0,0,0,.1);
+
+				&:hover,
+				&:visited,
+				&:focus,
+				&:active
+					text-decoration: none;
+					color: $col-font;
